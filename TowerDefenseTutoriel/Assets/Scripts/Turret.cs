@@ -1,4 +1,7 @@
-﻿using System.Collections;
+﻿/*
+ * 2 parties : trouver un ennemi dans la range et faire la rotation de la tourelle et AIM sur la Target
+ */
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
