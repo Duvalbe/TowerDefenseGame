@@ -7383,6 +7383,7 @@ GameObject:
   - component: {fileID: 1253576582}
   - component: {fileID: 1253576583}
   - component: {fileID: 1253576584}
+  - component: {fileID: 1253576585}
   m_Layer: 0
   m_Name: GameMaster
   m_TagString: Untagged
@@ -7436,6 +7437,18 @@ MonoBehaviour:
     type: 2}
   laserTurretPrefab: {fileID: 1260699872306904, guid: ec43616474b1570459cddff413b66f02,
     type: 2}
+--- !u!114 &1253576585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1253576581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcf4c345bc1bf3a4593bbba82c64e2e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startMoney: 400
 --- !u!1001 &1255590346
 Prefab:
   m_ObjectHideFlags: 0
