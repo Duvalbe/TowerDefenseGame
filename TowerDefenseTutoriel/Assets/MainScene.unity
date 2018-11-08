@@ -1040,12 +1040,12 @@ Prefab:
     - target: {fileID: 224905368806898956, guid: a2a5254e5483f5244b42ebf909a3f82d,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 100
+      value: 85
       objectReference: {fileID: 0}
     - target: {fileID: 224905368806898956, guid: a2a5254e5483f5244b42ebf909a3f82d,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 100
+      value: 85
       objectReference: {fileID: 0}
     - target: {fileID: 224905368806898956, guid: a2a5254e5483f5244b42ebf909a3f82d,
         type: 2}
@@ -1084,7 +1084,7 @@ Prefab:
       objectReference: {fileID: 446364854}
     - target: {fileID: 1273077913698786, guid: a2a5254e5483f5244b42ebf909a3f82d, type: 2}
       propertyPath: m_Name
-      value: RocketTurretItem
+      value: MissileLauncherItem
       objectReference: {fileID: 0}
     - target: {fileID: 114709614651391980, guid: a2a5254e5483f5244b42ebf909a3f82d,
         type: 2}
@@ -1095,7 +1095,17 @@ Prefab:
     - target: {fileID: 114030783666688302, guid: a2a5254e5483f5244b42ebf909a3f82d,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PurchaseRocketTurret
+      value: PurchaseMissileLauncher
+      objectReference: {fileID: 0}
+    - target: {fileID: 114912701526987464, guid: a2a5254e5483f5244b42ebf909a3f82d,
+        type: 2}
+      propertyPath: m_PreferredWidth
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 114912701526987464, guid: a2a5254e5483f5244b42ebf909a3f82d,
+        type: 2}
+      propertyPath: m_PreferredHeight
+      value: 90
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2a5254e5483f5244b42ebf909a3f82d, type: 2}
@@ -3147,7 +3157,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 534669902}
   m_LocalRotation: {x: 0.48175356, y: 0, z: 0, w: 0.8763068}
-  m_LocalPosition: {x: 38.9, y: 81.52, z: -95.6}
+  m_LocalPosition: {x: 37.5, y: 98.77, z: -101.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -7413,7 +7423,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   standartTurretPrefab: {fileID: 1260699872306904, guid: 98cd958bd4e27e44b991d005fe97b38c,
     type: 2}
-  rocketTurretPrefab: {fileID: 1260699872306904, guid: d9279f067a1981642a5b73fbe63a219a,
+  missileLauncherPrefab: {fileID: 1768364898330366, guid: 2772ee2a398d85e44a7dcf7acbb642bf,
     type: 2}
   laserTurretPrefab: {fileID: 1260699872306904, guid: ec43616474b1570459cddff413b66f02,
     type: 2}
