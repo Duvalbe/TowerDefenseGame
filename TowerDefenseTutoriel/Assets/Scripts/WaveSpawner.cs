@@ -27,7 +27,9 @@ public class WaveSpawner : MonoBehaviour {
 
         countdown -= Time.deltaTime; //Time.deltaTime = temps passer depuis la dernière frame
 
-        waveCountdownText.text = Mathf.Round(countdown).ToString();
+        countdown = Mathf.Clamp(countdown, 0f, Mathf.Infinity);
+
+        waveCountdownText.text = String.Format("{0:00.00}", countdown);
     }
 
     private void StartCoroutine(IEnumerable enumerable)
@@ -41,6 +43,7 @@ public class WaveSpawner : MonoBehaviour {
     IEnumerator SpawnWave()
     {
         waveIndex++;
+        PlayerStats.Rounds++;
         for (int i = 0; i < waveIndex; i++)
         {
             SpawnEnemy();
