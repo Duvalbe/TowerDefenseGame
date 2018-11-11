@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4829067745954244}
   - component: {fileID: 114289078535738374}
   m_Layer: 0
-  m_Name: StandartTurret
+  m_Name: StandartTurret_Upgraded
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -127,7 +127,7 @@ Transform:
   m_GameObject: {fileID: 1260699872306904}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 65, y: 0.5, z: -35}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_Children:
   - {fileID: 4160701662688082}
   - {fileID: 4479046135904902}
@@ -175,9 +175,9 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: fe50ad4668cc4d64b9b5c097f5ee9b86, type: 2}
-  - {fileID: 2100000, guid: 926674cb707c24345b756ebd12281ed2, type: 2}
-  - {fileID: 2100000, guid: 04e1cee85338d76478b00a7f7c8a766b, type: 2}
+  - {fileID: 2100000, guid: 371d380651da2ea4592b0b334ee5bea3, type: 2}
+  - {fileID: 2100000, guid: 7fae97181f43af743990d9ff8afa9e3b, type: 2}
+  - {fileID: 2100000, guid: 2b331259ca48ca14e9384a30ba1a17a0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -258,10 +258,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e53071aca14cd74b8ed6d493f765ac4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 15
-  bulletPrefab: {fileID: 1171612957668402, guid: c9d4ddf879ca8284295c8c8051952766,
+  range: 20
+  bulletPrefab: {fileID: 1171612957668402, guid: 9b68e33aa6f73734ea130f011ddc7580,
     type: 2}
-  fireRate: 2
+  fireRate: 3
   useLaser: 0
   damageOverTime: 30
   slowAmount: 0.5
