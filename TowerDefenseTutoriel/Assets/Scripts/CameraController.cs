@@ -4,9 +4,7 @@
 using UnityEngine;
 
 public class CameraController : MonoBehaviour {
-
-    private bool doMouvement = true;
-
+    
     public float panSpeed = 30f;
     public float panBorderThickness = 10f;
     public float scrollSpeed = 4f;
@@ -21,13 +19,6 @@ public class CameraController : MonoBehaviour {
             return;
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            doMouvement = !doMouvement;
-        } 
-
-        if (!doMouvement)
-            return;
         if (Input.GetKey("z"))// || Input.mousePosition.y >= Screen.height - panBorderThickness)
         {
             transform.Translate(Vector3.forward * panSpeed * Time.deltaTime, Space.World);
