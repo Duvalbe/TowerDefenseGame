@@ -3,28 +3,34 @@
  */
 
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour {
+
     public float startSpeed = 10f;
     [HideInInspector]
     public float speed; //mouvement des ennemies, peut être ajuster dans l'éditeur
-
-    public float health = 100f;//Vie de l'ennemy
+    public float starthealth = 10f;
+    private float health = 100f;//Vie de l'ennemy
     public int worth = 50; // l'argent gagner en le tuant
+
     public GameObject deathEffect;// a quoi ca ressemble quand il meurt    
+
+    [Header("Unity Stuff")]
+    public Image healthBar;
 
     public void Start()
     {
         speed = startSpeed;
+        health = starthealth;
     }
 
     public void TakeDamage(float amount)
     {
         health -= amount;
-
-        if(health <= 0)
-        {
-            
+        healthBar.fillAmount = health / starthealth;
+        if (health <= 0)
+        {            
             Die();
         }
     }
