@@ -211,6 +211,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ui: {fileID: 1998096702}
   upgradeCost: {fileID: 509533584}
+  sellAmount: {fileID: 1222941849}
   upgradeButton: {fileID: 2132948575}
 --- !u!1001 &23424305
 Prefab:
@@ -2815,13 +2816,15 @@ MonoBehaviour:
   missileLauncher:
     prefab: {fileID: 1768364898330366, guid: 2772ee2a398d85e44a7dcf7acbb642bf, type: 2}
     cost: 250
-    upgradedPrefab: {fileID: 0}
-    upgradeCost: 0
+    upgradedPrefab: {fileID: 1768364898330366, guid: 115354c0ae8d3594fa5a8b143fed0b44,
+      type: 2}
+    upgradeCost: 150
   laserbeamer:
     prefab: {fileID: 1308233088297134, guid: eb2851f57da4b0a4683631933607f47a, type: 2}
     cost: 350
-    upgradedPrefab: {fileID: 0}
-    upgradeCost: 60
+    upgradedPrefab: {fileID: 1308233088297134, guid: eb149ecefb5a39943879dfb78a090beb,
+      type: 2}
+    upgradeCost: 200
 --- !u!1001 &452003827
 Prefab:
   m_ObjectHideFlags: 0
@@ -4386,7 +4389,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 588095595}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5244698}
+        m_MethodName: Sell
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &588095595
@@ -8881,7 +8895,7 @@ GameObject:
   - component: {fileID: 1222941850}
   - component: {fileID: 1222941849}
   m_Layer: 0
-  m_Name: Cost
+  m_Name: Amout
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9243,6 +9257,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildEffect: {fileID: 1825747935531848, guid: 16adb70c917b3df4a921ea2880f430a6,
     type: 2}
+  sellEffect: {fileID: 1003695625831228, guid: 8839ae86eb2d75a43b8bd70bcc7a91ad, type: 2}
   nodeUi: {fileID: 5244698}
 --- !u!114 &1253576585
 MonoBehaviour:
@@ -14745,6 +14760,84 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1967627544}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1976935214
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4985682190334602, guid: 8839ae86eb2d75a43b8bd70bcc7a91ad, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4985682190334602, guid: 8839ae86eb2d75a43b8bd70bcc7a91ad, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 4985682190334602, guid: 8839ae86eb2d75a43b8bd70bcc7a91ad, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4985682190334602, guid: 8839ae86eb2d75a43b8bd70bcc7a91ad, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4985682190334602, guid: 8839ae86eb2d75a43b8bd70bcc7a91ad, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4985682190334602, guid: 8839ae86eb2d75a43b8bd70bcc7a91ad, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4985682190334602, guid: 8839ae86eb2d75a43b8bd70bcc7a91ad, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4985682190334602, guid: 8839ae86eb2d75a43b8bd70bcc7a91ad, type: 2}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726760516998836, guid: 8839ae86eb2d75a43b8bd70bcc7a91ad, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 198555351216372036, guid: 8839ae86eb2d75a43b8bd70bcc7a91ad,
+        type: 2}
+      propertyPath: ShapeModule.type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726760516998836, guid: 8839ae86eb2d75a43b8bd70bcc7a91ad, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726760516998836, guid: 8839ae86eb2d75a43b8bd70bcc7a91ad, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726760516998836, guid: 8839ae86eb2d75a43b8bd70bcc7a91ad, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 198555351216372036, guid: 8839ae86eb2d75a43b8bd70bcc7a91ad,
+        type: 2}
+      propertyPath: InitialModule.startSpeed.minScalar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 199869110604105026, guid: 8839ae86eb2d75a43b8bd70bcc7a91ad,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 730c00aeacde2e7468bebfe72ab62205, type: 2}
+    - target: {fileID: 198555351216372036, guid: 8839ae86eb2d75a43b8bd70bcc7a91ad,
+        type: 2}
+      propertyPath: looping
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8839ae86eb2d75a43b8bd70bcc7a91ad, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1001 &1980602221
 Prefab:
   m_ObjectHideFlags: 0
