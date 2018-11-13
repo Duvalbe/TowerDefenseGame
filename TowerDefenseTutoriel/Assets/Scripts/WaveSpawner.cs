@@ -18,14 +18,22 @@ public class WaveSpawner : MonoBehaviour {
     private int waveIndex = 0;// nombre d'ennemi qui vont spawn
     public Text waveCountdownText;
 
+    public GameManager gameManager;
+
     void Update()
     {
         if (EnemiesAlive > 0)
         {
             return;
         }
+
+        if (waveIndex == waves.Length)
+        {
+            gameManager.WinLevel();
+            this.enabled = false;//Stop le script
+        }
         //Manager pour la gestion du spawn   
-        if(countdown <= 0f)
+        if (countdown <= 0f)
         {
             StartCoroutine(SpawnWave());
             countdown = timeBetweenWaves;
@@ -54,6 +62,8 @@ public class WaveSpawner : MonoBehaviour {
 
         Wave wave = waves[waveIndex];
 
+        EnemiesAlive = wave.count;
+
         for (int i = 0; i < wave.count; i++)
         {
             SpawnEnemy(wave.enemy);
@@ -61,12 +71,6 @@ public class WaveSpawner : MonoBehaviour {
         }
 
         waveIndex++;
-
-        if(waveIndex == waves.Length)
-        {
-            Debug.Log("LEVEL WON");
-            this.enabled = false;
-        }
     }
 
     /* 
@@ -75,7 +79,6 @@ public class WaveSpawner : MonoBehaviour {
     void SpawnEnemy(GameObject enemy)
     {
         Instantiate(enemy, spawnPoint.position, spawnPoint.rotation);
-        EnemiesAlive++;
     }
 }
 

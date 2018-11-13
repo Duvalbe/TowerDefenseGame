@@ -7,7 +7,8 @@ public class GameManager : MonoBehaviour
 
     public static bool GameIsOver;
     public GameObject gameOverUI;
-
+    public GameObject completeLevelUI;
+    
     void Start()
     {
         GameIsOver = false;
@@ -30,5 +31,12 @@ public class GameManager : MonoBehaviour
         GameIsOver = true;
         gameOverUI.SetActive(true);
 
+    }
+
+    public void WinLevel()
+    {
+        Debug.Log("LEVEL WON");
+        GameIsOver = true;
+        completeLevelUI.SetActive(true);
     }
 }
