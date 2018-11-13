@@ -61,6 +61,7 @@ public class EnemyMouvement : MonoBehaviour {
     void EndPath()
     {
         PlayerStats.Lives--;
+        WaveSpawner.EnemiesAlive--;
         Destroy(gameObject);//la destruction d'un object peut prendre du temps du coup on utilise un return pour finir le script
     }
 }
